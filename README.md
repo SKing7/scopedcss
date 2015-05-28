@@ -1,18 +1,19 @@
 Scopecss
 ========
 
- Scope the css by custom prefix
- 对css代码增加scope前缀
+ Scope the css by custom prefix(e.g.: component name)
 
  Useage
 =======
 
-`var scopecss = require('scopecss')
+`
+var scopecss = require('scopecss')
 scopecss('my_component_prefix', '.nearby-place-list-content { color: red}');
 //返回: .my_component_prefix .nearby-place-list-content { color: red}
 `
 
 Install
 =======
-npm install scopecss
+
+`npm install scopecss`
 
