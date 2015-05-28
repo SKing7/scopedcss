@@ -1,6 +1,6 @@
 {
-  "name": "scopedcss",
-  "version": "0.0.1",
+  "name": "scopecss",
+  "version": "0.0.2",
   "description": "scope the css by custome prefix",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "local",
     "css"
   ],
-  "author": "sking7",
+  "author": "SKing7",
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/SKing7/scopedcss/issues"
