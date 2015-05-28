@@ -5,11 +5,13 @@ Scopecss
 
  Useage
 =======
+```js
+var scopecss = require('scopecss')
+var cssResource = '.nearby-place-list-content { color: red}';
+scopecss('my_component_prefix', cssResource);
+//return: .my_component_prefix .nearby-place-list-content { color: red}
+```
 
-    var scopecss = require('scopecss')
-    scopecss('my_component_prefix', '.nearby-place-list-content { color: red}');
-
-`.my_component_prefix .nearby-place-list-content { color: red}`
 Install
 =======
 
