@@ -1,0 +1,26 @@
+{
+  "name": "scopedcss",
+  "version": "0.0.1",
+  "description": "scope the css by custome prefix",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SKing7/scopedcss.git"
+  },
+  "keywords": [
+    "scope",
+    "local",
+    "css"
+  ],
+  "author": "sking7",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/SKing7/scopedcss/issues"
+  },
+  "dependencies": {
+    "gonzales": "~1.0.7"
+  }
+}
