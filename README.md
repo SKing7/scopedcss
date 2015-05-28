@@ -1,7 +1,7 @@
 Scopecss
 ========
 
- Scope the css by custom prefix(e.g.: component name)
+ Scope the css by custom prefix  `(e.g.: component name)`
 
  Useage
 =======
