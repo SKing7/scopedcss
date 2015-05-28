@@ -19,3 +19,7 @@ Install
 
     npm install scopecss
 
+Test
+=======
+
+    npm test
