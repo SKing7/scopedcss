@@ -8,7 +8,9 @@ Scopecss
 ```js
 var scopecss = require('scopecss')
 var cssResource = '.nearby-place-list-content { color: red}';
-scopecss('my_component_prefix', cssResource);
+var prefix = 'my_component_prefix';
+
+scopecss(prefix, cssResource);
 //return: .my_component_prefix .nearby-place-list-content { color: red}
 ```
 
