@@ -8,8 +8,8 @@ Scopecss
 
     var scopecss = require('scopecss')
     scopecss('my_component_prefix', '.nearby-place-list-content { color: red}');
-    //返回: .my_component_prefix .nearby-place-list-content { color: red}
 
+`.my_component_prefix .nearby-place-list-content { color: red}`
 Install
 =======
 
