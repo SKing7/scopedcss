@@ -1,6 +1,6 @@
 {
   "name": "scopecss",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "scope the css by custome prefix",
   "main": "index.js",
   "scripts": {
