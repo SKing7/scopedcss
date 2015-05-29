@@ -34,24 +34,28 @@ function ScopeIt(componentName, src) {
             if (node[1][0] === 'selector') {
                 // One which is surrounded by quotes
                 node[1].forEach(function (v) {
-                    var findClazz = false;
                     if (Array.isArray(v)) {
-                        if (v[0] === 'simpleselector') {
-                            v.forEach(function (v1, k1) {
-                                if (!findClazz && Array.isArray(v1)) {
-                                    if (v1[0] === 'clazz') {
-                                        addScope(v, componentName, k1);
-                                        findClazz = true;
-                                    }
-                                }
-                            });
-                        }
+                        whenSelector(v);
                     }
                 });
             }
         }
         return node;
 
+        function whenSelector(node) {
+            var findClazz;
+            if (node[0] === 'simpleselector') {
+                findClazz = false;
+                node.forEach(function (v, k) {
+                    if (!findClazz && Array.isArray(v)) {
+                        if (v[0] === 'clazz') {
+                            addScope(node, componentName, k);
+                            findClazz = true;
+                        }
+                    }
+                });
+            }
+        }
         function addScope(node, name, index) {
             node.splice(index, 0, ['clazz', ['ident', name]]); 
             node.splice(index + 1, 0, ['s', ' ']); 
