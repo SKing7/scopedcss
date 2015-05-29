@@ -15,6 +15,26 @@ var singleRules = [
         padding-left: 5px;\
         padding-top: 2px;\
     }',
+    '#container * {\
+         border: 1px solid black;\
+    }',
+    'li a {\
+        text-decoration: none;\
+    }',
+    'a:link { color: red; }',
+    'ul + p {\
+         color: red;\
+    }',
+    'div#container > ul{}',
+    'ul ~ p { color: red; }',
+    'a[title] { color: green; }',
+    'a[href="http://net.tutsplus.com"] { color: #1f6053; /* nettuts green */ }',
+    'input[type=radio]:checked { border: 1px solid black; }',
+    'div:not(#container) { color: blue; }',
+    'li:nth-child(3) { color: red; }',
+    'ul > li:only-of-type { font-weight: bold; }',
+    ':root { color: red; }',
+
 ];
 var mulitiRules = [
     '.nearby-place-list-content, .place-item {\

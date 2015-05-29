@@ -4,6 +4,7 @@ function ScopeIt(componentName, src) {
     var output;
         ast = gonzales.srcToCSSP(src);
 
+    //console.log(JSON.stringify(ast));
     transformAst(ast, filterAadComponentName);
     output = gonzales.csspToSrc(ast);
     return output;
@@ -44,24 +45,25 @@ function ScopeIt(componentName, src) {
         }
         return node;
 
-        function whenSelector(node) {
-            var findClazz;
-            if (node[0] === 'simpleselector') {
-                findClazz = false;
-                node.forEach(function (v, k) {
-                    if (!findClazz && Array.isArray(v)) {
-                        if (v[0] === 'clazz') {
-                            addScope(node, componentName, k);
-                            findClazz = true;
-                        }
+    }
+    function whenSelector(node) {
+        var findClazz;
+        if (node[0] === 'simpleselector') {
+            findClazz = false;
+            node.forEach(function (v, k) {
+                if (!findClazz && Array.isArray(v)) {
+                    // class,id,:root,element
+                    if (['clazz', 'ident', 'shash', 'pseudoc'].indexOf(v[0]) >= 0) {
+                        addScope(node, componentName, k);
+                        findClazz = true;
                     }
-                });
-            }
+                }
+            });
         }
-        function addScope(node, name, index) {
-            node.splice(index, 0, ['clazz', ['ident', name]]); 
-            node.splice(index + 1, 0, ['s', ' ']); 
-        }
+    }
+    function addScope(node, name, index) {
+        node.splice(index, 0, ['clazz', ['ident', name]]); 
+        node.splice(index + 1, 0, ['s', ' ']); 
     }
 }
 
