@@ -4,7 +4,6 @@ function ScopeIt(componentName, src) {
     var output;
         ast = gonzales.srcToCSSP(src);
 
-    console.log(JSON.stringify(ast));
     transformAst(ast, filterAadComponentName);
     output = gonzales.csspToSrc(ast);
     return output;
@@ -21,6 +20,9 @@ function ScopeIt(componentName, src) {
      * [styleSheet, [
      *      ruleset, [
      *          selector, [
+     *             simplieselector, [
+     *                  clazz: '.....'
+     *             ]
      *             simplieselector, [
      *                  clazz: '.....'
      *             ]
